@@ -1,21 +1,3 @@
-# Daisyxmusic (Telegram bot project)
-# Copyright (C) 2021  Inukaasith 
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-
-
 from os import path
 from typing import Dict
 from pyrogram import Client
@@ -454,7 +436,7 @@ async def play(_, message: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                                  "\n\nOr manually add userbot to your Group and try again</b>",
                               )
                               pass
     try:
@@ -551,7 +533,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {} via DaisyXmusic 😜".format(
+        caption="▶️ **Playing** here the song requested by {} 🎧 ".format(
         message.from_user.mention()
         ),
     )
@@ -572,7 +554,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "DaisyMusic"
+        user.first_name =  "Dua"
     usar = user
     wew = usar.id
     try:
@@ -585,7 +567,7 @@ async def deezer(client: Client, message_: Message):
                               invitelink = await client.export_chat_invite_link(chid)
                           except:
                               await lel.edit(
-                                  "<b>Add me as admin of yor group first</b>",
+                                  "<b>Add me as an admin of your group first</b>",
                               )
                               return
 
@@ -602,7 +584,7 @@ async def deezer(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                                  "\n\nOr manually add userbot to your Group and try again</b>",
                               )
                               pass
     try:
@@ -618,7 +600,7 @@ async def deezer(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     queryy = text[1]
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{queryy}` on deezer")
+    await res.edit(f"Searching 🔍 for `{queryy}` on deezer")
     try:
         arq = ARQ("https://thearq.tech")
         r = await arq.deezer(query=queryy, limit=1)
@@ -629,7 +611,7 @@ async def deezer(client: Client, message_: Message):
         url = r[0]["url"]
     except:
         await res.edit(
-            "Found Literally Nothing, You Should Work On Your English!"
+            "Nothing found ⁉️"
         )
         is_playing = False
         return
@@ -665,9 +647,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"✯DaisyXmusic✯= #️⃣ Queued at position {position}")
+        await res.edit_text(f"#️⃣ Queued at position {position}")
     else:
-        await res.edit_text("✯DaisyXmusic✯=▶️ Playing.....")
+        await res.edit_text("▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -702,7 +684,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "DaisyMusic"
+        user.first_name =  "Dua"
     usar = user
     wew = usar.id
     try:
@@ -715,7 +697,7 @@ async def jiosaavn(client: Client, message_: Message):
                               invitelink = await client.export_chat_invite_link(chid)
                           except:
                               await lel.edit(
-                                  "<b>Add me as admin of yor group first</b>",
+                                  "<b>Add me as an admin of your group first</b>",
                               )
                               return
 
@@ -732,7 +714,7 @@ async def jiosaavn(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                                  "\n\nOr manually add userbot to your Group and try again</b>",
                               )
                               pass
     try:
@@ -748,7 +730,7 @@ async def jiosaavn(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     query = text[1]
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{query}` on jio saavn")
+    await res.edit(f"Searching 🔍 for `{query}` on jio saavn")
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(
@@ -762,7 +744,7 @@ async def jiosaavn(client: Client, message_: Message):
         sduration = int(r[0]["duration"])
     except Exception as e:
         await res.edit(
-            "Found Literally Nothing!, You Should Work On Your English."
+            "Nothing found ⁉️"
         )
         print(str(e))
         is_playing = False
@@ -776,7 +758,7 @@ async def jiosaavn(client: Client, message_: Message):
              [
                InlineKeyboardButton(
                    text="Join Updates Channel",
-                   url='https://t.me/daisyxupdates')
+                   url='https://t.me/wandabetaxbot')
              ],
              [       
                InlineKeyboardButton(
@@ -800,12 +782,12 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"✯DaisyXmusic✯=#️⃣ Queued at position {position}",
+            caption=f"#️⃣ Queued at position {position}",
         
         )           
            
     else:
-        await res.edit_text("✯DaisyXmusic✯=▶️ Playing.....")
+        await res.edit_text("▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -826,5 +808,3 @@ async def jiosaavn(client: Client, message_: Message):
         
     )
     os.remove("final.png")
-
-# Have u read all. If read RESPECT :-)
