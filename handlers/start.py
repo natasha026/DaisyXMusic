@@ -20,7 +20,13 @@ Use the buttons below to know more about how to use me.""",
                     ),
                     InlineKeyboardButton(
                         "🛸 Channel", url="https://t.me/Wandabetaxbot"
-                    )]
+                    )
+                ],                    
+                [                    
+                    InlineKeyboardButton(
+                        "📜 User Manual", url="https://telegra.ph/MusicXstreamingBot-04-26"
+                    )                    
+                ]
             ]
         ),
      disable_web_page_preview=True
