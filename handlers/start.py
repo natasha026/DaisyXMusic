@@ -24,7 +24,7 @@ Use the buttons below to know more about how to use me.""",
                 ],                    
                 [                    
                     InlineKeyboardButton(
-                        "📜 User Manual", url="https://telegra.ph/MusicXstreamingBot-04-26"
+                        "📜 User Manual", url="https://telegra.ph/MusicXstreamingbot-05-12"
                     )                    
                 ]
             ]
