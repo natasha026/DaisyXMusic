@@ -1,14 +1,14 @@
-from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+#from pyrogram import Client, filters
+#from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-from config import BOT_NAME as bn
-
-
+#from config import BOT_NAME as bn
 
 
-@Client.on_message(filters.command("start") & filters.private & ~filters.channel)
-async def start(_, message: Message):
-    await message.reply_text(
+
+
+#@Client.on_message(filters.command("start") & filters.private & ~filters.channel)
+#async def start(_, message: Message):
+  #  await message.reply_text(
         #f"""<b>Hey {message.from_user.first_name}!</b>
 #I can play music in your Telegram's voice chat!
 #Use the buttons below to know more about how to use me.""",
